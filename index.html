@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCC: Formulário de Pesquisa</title>
     <link rel="shortcut icon" href="fcc-icon.svg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <h1>FCC:Survey Form</h1>
-        <nav>
-            <a href="#">Favoritar</a>
-            <a href="#">Ver código fonte</a>
-            <a href="#">Criar uma conta</a>
-            <a href="#">Entrar</a>
-        </nav>
+        <div>
+            <div id="titulo-area">
+                <div id="fcc">
+                    Desenvolvido pela <a href="https://codepen.io/freeCodeCamp" target="_blank">freeCodeCamp.org</a> <a href="#"><button>+ Follow</button></a>
+                </div>
+                <div id="titulo">
+                    <h1>FCC: Survey Form</h1>
+                </div>
+            </div>
+
+ 
+                    <div id="botoes">
+                        <a href="#"><button><span class="material-symbols-outlined">favorite</span></button></a>
+                        <a href="#"><button>Ver código fonte</button></a>
+                        <a href="#"><button>Criar uma conta</button></a>
+                        <a href="#"><button>Entrar</button></a>
+                    </div>
+
+
+        </div>
     </header>
     <main>
         <h1>Formulário de pesquisa freeCodeCamp</h1>
@@ -39,6 +51,7 @@
                 <p>
                     <label for="iocup">Qual opçao melhor descreve sua ocupaçao atual?</label><br>
                     <select name="ocup" id="iocup">
+                        <option value="" checked hidden>Escolha uma opçao</option>
                         <option value="estudante">Estudante</option>
                         <option value="integral">Trabalho em tempo integral</option>
                         <option value="nao-quer">Prefiro nao falar</option>
