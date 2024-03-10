@@ -23,7 +23,7 @@ header > div {
 }
 
 div#titulo-area {
-    display: block;
+    display: inline-block;
     width: 100%;
     justify-content: left;
 }
@@ -46,6 +46,21 @@ div#fcc > a:hover {
     font-weight: bold;
 }
 
+button.hidden {
+    display: none;
+}
+
+button.verde {
+    background-color: rgb(66, 235, 66);
+    padding: 1px;
+    width: 100%;
+}
+
+button.verde:hover {
+    background-color: rgb(14, 146, 14);
+    color: white;
+}
+
 div#titulo {
     display: flex;
     align-items: center;
@@ -59,4 +74,26 @@ div#botoes {
     display: flex;
     align-items: center;
     justify-content: right;
+    padding: 0px;
+    width: 70%;
+}
+
+div#botoes > a {
+    padding: 2px;
+}
+
+div#botoes > a > button {
+    border-radius: 10px;
+    padding: 5px;
+    height: 50px;    
+    font-weight: bold;
+}
+
+button.outros-botoes {
+    background-color: #666977;
+    color: white;
+}
+
+button.outros-botoes:hover {
+    background-color: #818699;
 }
