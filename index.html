@@ -13,7 +13,7 @@
         <div>
             <div id="titulo-area">
                 <div id="fcc">
-                    Desenvolvido pela <a href="https://codepen.io/freeCodeCamp" target="_blank">freeCodeCamp.org</a> <a href="#"><button class="hidden verde">+ Follow</button></a>
+                    Desenvolvido pela<a href="https://codepen.io/freeCodeCamp" target="_blank">freeCodeCamp.org</a><a href="#"><button class="hidden verde">+ Follow</button></a>
                 </div>
                 <div id="titulo">
                     <h1>FCC: Survey Form</h1>
@@ -28,71 +28,76 @@
         </div>
     </header>
     <main>
-        <h1>Formulário de pesquisa freeCodeCamp</h1>
-        <p>Obrigado por tirar um tempo para nos ajudar a melhorar nossa plataforma</p>
-        <section>   
-            <form action="" method="post">
-                <p>
-                    <label for="inome">Nome</label><br>
-                    <input type="text" name="nome" id="inome" required autocomplete="name">
-                </p>
-                <p>
-                    <label for="iemail">E-mail</label><br>
-                    <input type="email" name="email" id="iemail" required autocomplete="email">
-                </p>
-                <p>
-                    <label for="iidade">Idade</label><br>
-                    <input type="number" name="idade" id="iidade" min="10" max="99">
-                </p>
-                <p>
-                    <label for="iocup">Qual opçao melhor descreve sua ocupaçao atual?</label><br>
-                    <select name="ocup" id="iocup">
-                        <option value="" checked hidden>Escolha uma opçao</option>
-                        <option value="estudante">Estudante</option>
-                        <option value="integral">Trabalho em tempo integral</option>
-                        <option value="nao-quer">Prefiro nao falar</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </p>
-                <p>
-                    Voce recomendaria o freeCodeCamp a um amigo?<br>
-                    <input type="radio" name="certeza" id="ictz"><label for="ictz">Com certeza</label><br>
-                    <input type="radio" name="talvez" id="ital"><label for="ital">Talvez</label><br>
-                    <input type="radio" name="nao" id="inao"><label for="inao">Nao</label>
-                </p>
-                <p>
+
+        <div class="container">
+            <div class="titulo-pesquisa">
+                <h1>Formulário de pesquisa freeCodeCamp</h1>
+                <p>Obrigado por tirar um tempo para nos ajudar a melhorar nossa plataforma</p>
+            </div>
+            <section>
+                <form action="" method="post">
                     <p>
-                        <label for="irecu">Qual é o seu recurso favorito que o freeCodeCamp oferece?</label><br>
-                        <select name="recursos" id="irecu" required>
-                            <option value="" checked hidden>Escolha uma opçao</option>
-                            <option value="desafios">Desafios</option>
-                            <option value="projetos">Projetos</option>
-                            <option value="comunidade">Comunidade</option>
-                            <option value="opensource">Open Source</option>
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" required autocomplete="name" placeholder="Coloque seu nome">
+                    </p>
+                    <p>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Coloque seu e-mail">
+                    </p>
+                    <p>
+                        <label for="iidade">Idade (opcional)</label>
+                        <input type="number" name="idade" id="iidade" min="10" max="99" placeholder="Idade">
+                    </p>
+                    <p>
+                        <label for="iocup">Qual opçao melhor descreve sua ocupaçao atual?</label>
+                        <select name="ocup" id="iocup">
+                            <option value="" checked hidden>Escolha sua ocupaçao atual</option>
+                            <option value="estudante">Estudante</option>
+                            <option value="integral">Trabalho em tempo integral</option>
+                            <option value="nao-quer">Prefiro nao falar</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </p>
-                    O que voce gostaria que fosse melhorado?<br>
-                    <input type="checkbox" name="front" id="ifron"><label for="ifron">Projetos Front-end</label><br>
-                    <input type="checkbox" name="back" id="iback"><label for="iback">Projetos Back-end</label><br>
-                    <input type="checkbox" name="data" id="idat"><label for="idat">Visualizaçao de Dados</label><br>
-                    <input type="checkbox" name="desafios" id="idesa"><label for="idesa">Desafios</label><br>
-                    <input type="checkbox" name="open" id="iopen"><label for="iopen">Comunidade Open Source</label><br>
-                    <input type="checkbox" name="gitt" id="igitt"><label for="igitt">Salas de ajuda Gitter</label><br>
-                    <input type="checkbox" name="videos" id="ivid"><label for="ivid">Videos</label><br>
-                    <input type="checkbox" name="encon" id="iencon"><label for="iencon">Encontros nas Cidades</label><br>
-                    <input type="checkbox" name="wiki" id="iwiki"><label for="iwiki">Wiki</label><br>
-                    <input type="checkbox" name="forum" id="iforum"><label for="iforum">Forum</label><br>
-                    <input type="checkbox" name="cursos" id="icurs"><label for="icurs">Cursos</label><br>
-                </p>
-                <p>
-                    <label for="icoment">Alguma sugestao ou comentario?</label><br>
-                    <textarea name="" id="icoment" cols="30" rows="10"></textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Enviar">
-                </p>
-            </form>
-        </section>
+                    <p class="choices">
+                        <legend>Voce recomendaria o freeCodeCamp a um amigo?</legend>
+                        <input type="radio" name="recomenda" id="ictz" value="certeza"><label for="ictz">Com certeza</label><br>
+                        <input type="radio" name="recomenda" id="ital" value="talvez"><label for="ital">Talvez</label><br>
+                        <input type="radio" name="recomenda" id="inao" value="nao"><label for="inao">Nao</label>
+                    </p>
+                    <p>
+                            <label for="irecu">Qual é o seu recurso favorito que o freeCodeCamp oferece?</label>
+                            <select name="recursos" id="irecu" required>
+                                <option value="" checked hidden>Escolha uma opçao</option>
+                                <option value="desafios">Desafios</option>
+                                <option value="projetos">Projetos</option>
+                                <option value="comunidade">Comunidade</option>
+                                <option value="opensource">Open Source</option>
+                            </select>
+                    </p>
+                    <p class="choices">
+                            <legend>O que voce gostaria que fosse melhorado?</legend>
+                            <input type="checkbox" name="front" id="ifron"><label for="ifron">Projetos Front-end</label><br>
+                            <input type="checkbox" name="back" id="iback"><label for="iback">Projetos Back-end</label><br>
+                            <input type="checkbox" name="data" id="idat"><label for="idat">Visualizaçao de Dados</label><br>
+                            <input type="checkbox" name="desafios" id="idesa"><label for="idesa">Desafios</label><br>
+                            <input type="checkbox" name="open" id="iopen"><label for="iopen">Comunidade Open Source</label><br>
+                            <input type="checkbox" name="gitt" id="igitt"><label for="igitt">Salas de ajuda Gitter</label><br>
+                            <input type="checkbox" name="videos" id="ivid"><label for="ivid">Videos</label><br>
+                            <input type="checkbox" name="encon" id="iencon"><label for="iencon">Encontros nas Cidades</label><br>
+                            <input type="checkbox" name="wiki" id="iwiki"><label for="iwiki">Wiki</label><br>
+                            <input type="checkbox" name="forum" id="iforum"><label for="iforum">Forum</label><br>
+                            <input type="checkbox" name="cursos" id="icurs"><label for="icurs">Cursos</label><br>
+                    </p>
+                    <p>
+                        <label for="icoment">Alguma sugestao ou comentario?</label><br>
+                        <textarea name="comentario" id="icoment" cols="30" rows="10" placeholder="Digite seu comentário aqui..."></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Enviar" id="ienviar">
+                    </p>
+                </form>
+            </section>
+        </div>
     </main>
 </body>
 </html>

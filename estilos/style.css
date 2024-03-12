@@ -6,25 +6,28 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 header > div {
     background-color: black;
     padding: 10px;
     width: 100%;
-    min-width: 565px;
-    height: 80px;
+    height: 90px;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: right;
+    white-space: nowrap;
+    font-size: 85%;
 }
 
 div#titulo-area {
     display: inline-block;
     width: 100%;
+    height: 100%;
     justify-content: left;
 }
 
@@ -33,6 +36,7 @@ div#fcc {
     color: lightgray;
     padding: 5px;
     align-items: center;
+    width: 100%;
 }
 
 div#fcc > a {
@@ -43,7 +47,6 @@ div#fcc > a {
 
 div#fcc > a:hover {
     color: white;
-    font-weight: bold;
 }
 
 button.hidden {
@@ -51,13 +54,13 @@ button.hidden {
 }
 
 button.verde {
-    background-color: rgb(66, 235, 66);
+    background-color: #37AF65;
     padding: 1px;
     width: 100%;
 }
 
 button.verde:hover {
-    background-color: rgb(14, 146, 14);
+    background-color: #248C46;
     color: white;
 }
 
@@ -96,4 +99,84 @@ button.outros-botoes {
 
 button.outros-botoes:hover {
     background-color: #818699;
+}
+
+main {
+    background-color: darkgray;
+    width: 100%;
+}
+
+div.container {
+    width: 100%;
+    background: url(../imagens/fundo01.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+div.titulo-pesquisa {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    padding-top: 50px;
+    font-weight: lighter;
+}
+
+div.titulo-pesquisa > p {
+    font-style: italic;
+    padding: 10px;
+}
+
+section {
+    display: block;
+    margin: auto;
+    background-color: #282745da;
+    width: 70%;
+    height: 100%;
+    padding: 40px;
+    color: white;
+    font-size: 1.3em;
+    line-height: 1.6;
+    max-width: 720px;
+    min-width: 493px;
+}
+
+form > p {
+    padding: 20px;
+}
+
+form > P > input#inome, #iemail, #iidade, #iocup, select#irecu {
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 8px;
+    font-size: 0.8em;
+    
+}
+form > p.choices > label {
+    padding: 5px;
+}
+
+form > p > textarea {
+    width: 100%;
+    resize: none;
+    font-size: 1.1em;
+}
+
+form > p > input#ienviar {
+    background-color: #37AF65;
+    font-size: 0.9em;
+    font-weight: bolder;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    border: none;
+}
+
+form > p > input#ienviar:hover {
+    background-color: #248C46;
+    color: white;
 }
